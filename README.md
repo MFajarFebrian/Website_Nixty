@@ -1,8 +1,23 @@
-# Website_Nixty
+# Office 365 Retail Store
 
-This repository contains the static build of an Office 365 Retail Store, deployed via GitHub Pages.
+**This branch contains only the deployed static files for GitHub Pages.**
 
-**To visit the live site: [Office 365 Retail Store](https://mfajarfebrian.github.io/Website_Nixty/app.html)**
+The main source code for the application is in the master branch. If you're seeing this README instead of the website, the GitHub Pages deployment might still be processing.
+
+## Visit the live site
+[Office 365 Retail Store Website](https://mfajarfebrian.github.io/Website_Nixty/index.html)
+
+## About
+This is a static HTML version of our Office 365 retail store for GitHub Pages hosting. It includes:
+- Product browsing
+- Product details
+- Responsive design
+- E-commerce platform for selling Office 365 subscriptions
+
+## Important Note
+This is only the compiled output. For development, please switch to the `master` branch.
+
+Built with HTML, CSS and minimal JavaScript.
 
 ## About the Project
 
