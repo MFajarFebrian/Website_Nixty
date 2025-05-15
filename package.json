@@ -8,8 +8,15 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "deploy": "gh-pages -d .output/public",
     "db:migrate": "node server/database/migrate.js",
     "db:test": "node server/database/test-connection.js"
+  },
+  "devDependencies": {
+    "@nuxt/eslint-config": "^0.2.0",
+    "eslint": "^9.26.0",
+    "gh-pages": "^6.3.0",
+    "nuxt": "^3.17.3"
   },
   "dependencies": {
     "@nuxt/content": "^3.5.1",
@@ -25,10 +32,8 @@
     "@unhead/vue": "^2.0.8",
     "bcrypt": "^6.0.0",
     "drizzle-orm": "^0.43.1",
-    "eslint": "^9.26.0",
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.14.1",
-    "nuxt": "^3.17.3",
     "typescript": "^5.8.3",
     "vue": "^3.5.13",
     "vue-router": "^4.5.1"
