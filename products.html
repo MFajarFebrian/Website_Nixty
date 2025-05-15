@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Office 365 Retail Store</title>
+  <title>Products - Office 365 Retail Store</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -22,13 +22,16 @@
       margin: 0 auto;
       padding: 2rem;
     }
-    .hero {
+    .filters {
       background-color: white;
       border-radius: 8px;
-      padding: 2rem;
+      padding: 1rem;
       margin-bottom: 2rem;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      text-align: center;
+    }
+    .filter-group {
+      display: inline-block;
+      margin-right: 2rem;
     }
     .products {
       display: grid;
@@ -70,14 +73,32 @@
   </header>
   
   <main>
-    <div class="hero">
-      <h2>Welcome to the Office 365 Store</h2>
-      <p>Your one-stop shop for Microsoft Office subscriptions and products.</p>
-      <a href="./products.html" class="button">Browse Products</a>
-      <a href="./app.html" class="button">View Dynamic Site</a>
+    <h2>All Products</h2>
+    
+    <div class="filters">
+      <div class="filter-group">
+        <label for="category">Category:</label>
+        <select id="category">
+          <option value="all">All Categories</option>
+          <option value="subscription">Subscriptions</option>
+          <option value="one-time">One-time Purchase</option>
+          <option value="business">Business</option>
+        </select>
+      </div>
+      
+      <div class="filter-group">
+        <label for="sort">Sort by:</label>
+        <select id="sort">
+          <option value="popularity">Popularity</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="name">Name</option>
+        </select>
+      </div>
+      
+      <button class="button" style="margin-top: 0;">Apply Filters</button>
     </div>
     
-    <h2>Featured Products</h2>
     <div class="products">
       <div class="product">
         <h3>Microsoft 365 Personal</h3>
@@ -105,6 +126,20 @@
         <p>One-time purchase for 1 PC or Mac. Includes classic Office apps plus Outlook.</p>
         <p><strong>$249.99</strong></p>
         <a href="./product-4.html" class="button">View Details</a>
+      </div>
+      
+      <div class="product">
+        <h3>Microsoft 365 Business Basic</h3>
+        <p>For businesses. Web and mobile versions of Office apps, email, and more.</p>
+        <p><strong>$6.00/month per user</strong></p>
+        <a href="./product-5.html" class="button">View Details</a>
+      </div>
+      
+      <div class="product">
+        <h3>Microsoft 365 Business Standard</h3>
+        <p>For businesses. Desktop, web, and mobile Office apps, email, and more.</p>
+        <p><strong>$12.50/month per user</strong></p>
+        <a href="./product-6.html" class="button">View Details</a>
       </div>
     </div>
   </main>
