@@ -1,99 +1,18 @@
-# Nuxt Minimal Starter
+# Office 365 Retail Store
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is the GitHub Pages repository for our Office 365 retail store website.
 
-## Setup
+## Visit the Site
 
-Make sure to install dependencies:
+If you're seeing this page instead of our website, please [click here to go to the actual site](https://mfajarfebrian.github.io/Website_Nixty/).
 
-```bash
-# npm
-npm install
+## About the Project
 
-# pnpm
-pnpm install
+This is an e-commerce platform for selling Office 365 subscriptions with features including:
+- Product browsing
+- User accounts
+- Shopping cart
+- Admin dashboard
+- Secure checkout
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-
-## Deployment
-
-This project is set up to automatically deploy to GitHub Pages whenever changes are pushed to the master branch.
-
-### Manual Deployment
-
-You can also manually deploy the site using:
-
-```bash
-# Generate static files
-npm run generate
-
-# Deploy to GitHub Pages
-npm run deploy
-```
-
-### Continuous Deployment
-
-The project uses GitHub Actions for continuous deployment. When you push to the master branch, the workflow will:
-1. Build the application
-2. Deploy it to GitHub Pages
-
-You can see the deployment workflow in `.github/workflows/deploy.yml`.
+Built with Nuxt.js and MySQL. 
