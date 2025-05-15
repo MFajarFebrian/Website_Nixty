@@ -1,59 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Office 365 Retail Store</title>
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
       margin: 0;
       padding: 0;
-      background-color: #f5f5f5;
       color: #333;
+      background-color: #f5f9ff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
+    
     header {
       background-color: #0078d4;
       color: white;
       padding: 1rem;
       text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
+    
     main {
+      flex: 1;
       max-width: 1200px;
       margin: 0 auto;
       padding: 2rem;
+      width: 100%;
+      box-sizing: border-box;
     }
+    
     .hero {
       background-color: white;
       border-radius: 8px;
       padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       text-align: center;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-    .product {
-      background-color: white;
-      border-radius: 8px;
-      padding: 1.5rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .product h3 {
+    
+    .hero h2 {
       margin-top: 0;
       color: #0078d4;
     }
+    
     .button {
       display: inline-block;
       background-color: #0078d4;
       color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
       text-decoration: none;
-      margin-top: 1rem;
+      padding: 0.5rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 500;
+      margin: 0.5rem;
+      transition: background-color 0.2s;
     }
+    
+    .button:hover {
+      background-color: #005a9e;
+    }
+    
+    .button.secondary {
+      background-color: #f0f0f0;
+      color: #333;
+    }
+    
+    .button.secondary:hover {
+      background-color: #e0e0e0;
+    }
+    
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    
+    .product {
+      background-color: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .product h3 {
+      color: #0078d4;
+      margin-top: 0;
+    }
+    
     footer {
       background-color: #333;
       color: white;
@@ -61,9 +98,17 @@
       padding: 1rem;
       margin-top: 2rem;
     }
+    
+    footer a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
-  <base href="./">
-  <link rel="shortcut icon" href="./favicon.ico">
 </head>
 <body>
   <header>
@@ -72,10 +117,12 @@
   
   <main>
     <div class="hero">
-      <h2>Welcome to the Office 365 Store</h2>
+      <h2>Welcome to Our Office 365 Store</h2>
       <p>Your one-stop shop for Microsoft Office subscriptions and products.</p>
-      <a href="./products.html" class="button">Browse Products</a>
-      <a href="./app.html" class="button">View Dynamic Site</a>
+      <div>
+        <a href="products.html" class="button">Browse Products</a>
+        <a href="login.html" class="button secondary">Sign In</a>
+      </div>
     </div>
     
     <h2>Featured Products</h2>
@@ -84,40 +131,33 @@
         <h3>Microsoft 365 Personal</h3>
         <p>For 1 person. Includes premium Office apps, 1TB cloud storage, and more.</p>
         <p><strong>$69.99/year</strong></p>
-        <a href="./product-1.html" class="button">View Details</a>
+        <a href="product-1.html" class="button">View Details</a>
       </div>
       
       <div class="product">
         <h3>Microsoft 365 Family</h3>
         <p>For up to 6 people. Includes premium Office apps, 1TB cloud storage per person, and more.</p>
         <p><strong>$99.99/year</strong></p>
-        <a href="./product-2.html" class="button">View Details</a>
+        <a href="product-2.html" class="button">View Details</a>
       </div>
       
       <div class="product">
         <h3>Office Home & Student 2021</h3>
         <p>One-time purchase for 1 PC or Mac. Includes classic Office apps.</p>
         <p><strong>$149.99</strong></p>
-        <a href="./product-3.html" class="button">View Details</a>
-      </div>
-      
-      <div class="product">
-        <h3>Office Home & Business 2021</h3>
-        <p>One-time purchase for 1 PC or Mac. Includes classic Office apps plus Outlook.</p>
-        <p><strong>$249.99</strong></p>
-        <a href="./product-4.html" class="button">View Details</a>
+        <a href="product-3.html" class="button">View Details</a>
       </div>
     </div>
   </main>
   
   <footer>
     <p>&copy; 2024 Office 365 Retail Store. All rights reserved.</p>
-    <p>
-      <a href="./about.html" style="color: white; margin: 0 10px;">About</a>
-      <a href="./contact.html" style="color: white; margin: 0 10px;">Contact</a>
-      <a href="./login.html" style="color: white; margin: 0 10px;">Login</a>
-      <a href="./register.html" style="color: white; margin: 0 10px;">Register</a>
-    </p>
+    <div>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </div>
   </footer>
 </body>
 </html> 
