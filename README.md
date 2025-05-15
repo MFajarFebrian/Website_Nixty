@@ -73,3 +73,27 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Deployment
+
+This project is set up to automatically deploy to GitHub Pages whenever changes are pushed to the master branch.
+
+### Manual Deployment
+
+You can also manually deploy the site using:
+
+```bash
+# Generate static files
+npm run generate
+
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+### Continuous Deployment
+
+The project uses GitHub Actions for continuous deployment. When you push to the master branch, the workflow will:
+1. Build the application
+2. Deploy it to GitHub Pages
+
+You can see the deployment workflow in `.github/workflows/deploy.yml`.

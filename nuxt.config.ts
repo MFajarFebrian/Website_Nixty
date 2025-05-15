@@ -27,5 +27,11 @@ export default defineNuxtConfig({
     public: {
       apiBase: process.env.API_BASE || '/api'
     }
+  },
+
+  app: {
+    // Base URL for GitHub Pages
+    // Replace 'Website_Nixty' with your repository name
+    baseURL: '/Website_Nixty/'
   }
 })
