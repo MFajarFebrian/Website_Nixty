@@ -20,6 +20,25 @@ window.addEventListener('DOMContentLoaded', () => {
           </div>
         `;
       }
+    },
+    
+    // Safe storage methods that won't throw errors
+    safeStorage: {
+      get(key) {
+        try {
+          return window.localStorage.getItem(key);
+        } catch (e) {
+          console.warn('localStorage access denied');
+          return null;
+        }
+      },
+      set(key, value) {
+        try {
+          window.localStorage.setItem(key, value);
+        } catch (e) {
+          console.warn('localStorage access denied');
+        }
+      }
     }
   };
   

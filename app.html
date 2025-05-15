@@ -5,8 +5,29 @@
   <title>Office 365 Retail Store</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./_nuxt/default.C8Y79b0h.css">
-  <script type="module" src="./_nuxt/xnOkjXsX.js"></script>
+  <link rel="shortcut icon" href="./favicon.ico">
   <base href="./">
+  <script>
+    // Override localStorage and sessionStorage to prevent errors
+    try {
+      // Test if storage is accessible
+      window.localStorage.getItem('test');
+      window.sessionStorage.getItem('test');
+    } catch (e) {
+      // If not accessible, create dummy storage objects
+      var storageMock = {
+        getItem: function() { return null; },
+        setItem: function() { return null; },
+        removeItem: function() { return null; },
+        clear: function() { return null; },
+        key: function() { return null; },
+        length: 0
+      };
+      Object.defineProperty(window, 'localStorage', { value: storageMock });
+      Object.defineProperty(window, 'sessionStorage', { value: storageMock });
+    }
+  </script>
+  <script type="module" src="./_nuxt/xnOkjXsX.js"></script>
 </head>
 <body>
   <div id="__nuxt" class="isolate">
