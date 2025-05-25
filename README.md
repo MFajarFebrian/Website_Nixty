@@ -32,7 +32,7 @@ A Nuxt.js web application with MySQL integration and Google OAuth authentication
    ```
 
 3. Set up the database:
-   - Create a database named `nixty_db`
+   - Create a database named `nixty`
    - Run the SQL script in `server/utils/update_schema.sql` to create the necessary tables
 
 4. Configure Google OAuth:
