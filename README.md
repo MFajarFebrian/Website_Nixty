@@ -21,16 +21,19 @@ A Nuxt.js web application with MySQL integration and Google OAuth authentication
 ### Installation
 
 1. Clone the repository
+   ```
+   git clone https://github.com/MFajarFebrian/website_nixty.git
+   cd website_nixty
+   ```
+
 2. Install dependencies:
    ```
    npm install
    ```
+
 3. Set up the database:
-   - Create a database named `nixty`
-   - Run the SQL scripts in the `server/utils` directory
-   - For Google OAuth fields, run:
-     - On Windows: `.\update_database.ps1`
-     - On Unix/Linux/Mac: `bash update_database.sh`
+   - Create a database named `nixty_db`
+   - Run the SQL script in `server/utils/update_schema.sql` to create the necessary tables
 
 4. Configure Google OAuth:
    - The application is pre-configured with a client ID
@@ -40,6 +43,36 @@ A Nuxt.js web application with MySQL integration and Google OAuth authentication
    ```
    npm run dev
    ```
+
+## Project Structure
+
+```
+Project_Nixty/
+├── components/
+│   ├── AppHeader.vue        # Navigation header
+│   ├── DashboardAdmin.vue   # Admin dashboard view
+│   ├── DashboardUser.vue    # Regular user dashboard view
+│   ├── GoogleButton.vue     # Google OAuth button
+│   ├── LoginForm.vue        # User login form
+│   ├── LogoutButton.vue     # Logout functionality
+│   └── RegisterForm.vue     # User registration form
+├── composables/
+│   ├── useAuth.ts           # Authentication state management
+│   └── useGoogleAuth.ts     # Google OAuth configuration
+├── pages/
+│   └── dashboard.vue        # Dashboard page
+├── server/
+│   ├── api/
+│   │   ├── admin/           # Admin-specific endpoints
+│   │   ├── auth/            # OAuth endpoints
+│   │   ├── login.post.ts    # Login endpoint
+│   │   └── register.post.ts # Registration endpoint
+│   └── utils/
+│       ├── db.ts            # Database connection
+│       └── update_schema.sql # Database schema
+└── types/
+    └── google-auth.d.ts     # TypeScript definitions for Google Auth
+```
 
 ## Google OAuth Setup
 
