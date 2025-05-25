@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": ".output/public",
+  "devCommand": "npm run dev",
+  "framework": "nuxt",
+  "env": {
+    "MYSQL_HOST": "103.78.115.243",
+    "MYSQL_PORT": "3306",
+    "MYSQL_DATABASE": "nixty",
+    "MYSQL_USER": "nixty_remote",
+    "MYSQL_PASSWORD": "nixty_password"
+  }
+} 
