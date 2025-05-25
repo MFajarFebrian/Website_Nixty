@@ -1,8 +1,9 @@
 {
   "version": 2,
-  "framework": "nuxtjs",
   "buildCommand": "npm run build",
   "outputDirectory": ".output/public",
+  "devCommand": "npm run dev",
+  "framework": "nuxtjs",
   "env": {
     "MYSQL_HOST": "103.78.115.243",
     "MYSQL_PORT": "3306",
