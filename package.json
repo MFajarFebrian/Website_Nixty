@@ -1,0 +1,27 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build --typescript.typeCheck false",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "h3": "^1.11.1",
+    "mysql2": "^3.9.1",
+    "nuxt": "^3.10.3",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.18.1",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/mysql": "^2.15.25",
+    "@types/node": "^18.19.26",
+    "typescript": "^5.4.2"
+  }
+} 

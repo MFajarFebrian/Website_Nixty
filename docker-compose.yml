@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: nixty-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: nixty
+      MYSQL_USER: nixty_user
+      MYSQL_PASSWORD: nixty_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - nixty-mysql-data:/var/lib/mysql
+      # Mount the SQL script to initialize the database
+      - ./Project_Nixty/server/utils/update_schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+    command: --default-authentication-plugin=mysql_native_password
+    networks:
+      - nixty-network
+
+networks:
+  nixty-network:
+    driver: bridge
+
+volumes:
+  nixty-mysql-data:
+    driver: local 
